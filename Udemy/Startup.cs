@@ -27,6 +27,8 @@ namespace Udemy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Configuration.GetConnectionString Will connect to the database specificied in the Appsettings.json file
+            //To UseSqlite, import it using the nuget package manager [entityframeworkcore.Sqlite -- 2.1.3]
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
+//Migrations are run with Add-Migration InitialMigrations && Update-Database
 namespace Udemy.Migrations
 {
     public partial class InitialMigration : Migration

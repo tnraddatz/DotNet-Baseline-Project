@@ -12,14 +12,16 @@ namespace Udemy.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly DataContext _context;  //Private DB Variable
 
+        //Add the constructor method to connect to DB
         public ValuesController(DataContext context)
         {
-            _context = context;
+            _context = context; //Add context
         }
 
         // GET api/values
+        //Async Tasks
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
@@ -28,6 +30,7 @@ namespace Udemy.Controllers
         }
 
         // GET api/values/5
+        //Async Tasks
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {

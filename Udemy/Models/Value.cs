@@ -7,6 +7,7 @@ namespace Udemy.Models
 {
     public class Value
     {
+        //Set the columns of the Value Table
         public int Id { get; set; } 
         public string MyProperty { get; set; }
 
